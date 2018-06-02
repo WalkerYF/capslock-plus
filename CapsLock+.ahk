@@ -80,9 +80,13 @@ settimer, changeMouseSpeed, 50 ;暂时修改鼠标速度
 
 KeyWait, Capslock
 CapsLock:="" ;Capslock最优先置空，来关闭 Capslock+ 功能的触发
+; if CapsLock2
+; {
+;     SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off" : "On"
+; }
 if CapsLock2
 {
-    SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off" : "On"
+    sendinput, {esc}
 }
 CapsLock2:=""
 
