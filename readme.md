@@ -1,5 +1,6 @@
 [功能说明文档](http://cjkis.me/capslock+/)
 
+注意：这个是我fork过来自己用的，功能与原版有所不同。
 
 ##1.怎么运行Capslock+的源码？
 1. 下载 [AutoHotkey](http://www.ahkscript.org/)，并安装。
