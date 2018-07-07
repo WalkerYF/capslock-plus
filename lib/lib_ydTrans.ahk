@@ -78,7 +78,7 @@ else ;IfWinNotExist,  ahk_id %transGuiHwnd% ;有道翻译
 	Gui, +AlwaysOnTop -Border +Caption -Disabled -LastFound -MaximizeBox -OwnDialogs -Resize +SysMenu -Theme -ToolWindow
 	Gui, Font, s10 w400, Microsoft YaHei UI ;设置字体
 	Gui, Font, s10 w400, 微软雅黑
-	gui, Add, Button, x-40 y-40 Default, OK  
+	Gui, Add, Button, x-40 y-40 Default, OK  
 	
 	Gui, Add, Edit, x-2 y0 w504 h405 vTransEdit HwndtransEditHwnd -WantReturn -VScroll , %MsgBoxStr%
 	Gui, Color, ffffff, fefefe
