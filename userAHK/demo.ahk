@@ -92,3 +92,15 @@ keyfunc_open_system_shuxing(){
     Return
 }
 
+keyfunc_open_totalcmd(){
+    global
+	DetectHiddenWindows, on
+	IfWinNotExist ahk_class TTOTAL_CMD
+		Run D:\Program\TotalCMD\Totalcmd.exe
+	Else
+		IfWinNotActive ahk_class TTOTAL_CMD
+		WinActivate
+	Else
+		WinMinimize
+    Return
+}
