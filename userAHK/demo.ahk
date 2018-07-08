@@ -112,3 +112,63 @@ keyfunc_close_window(){
     send !{F4}
     Return
 }
+
+
+; snipaste截图
+keyfunc_snipaste_capture(){
+    global
+    send ^!{F1}
+    Return
+}
+
+; snipaste贴图
+keyfunc_snipaste_tie(){
+    global
+    send ^!{F2}
+    Return
+}
+
+; shareX 截图 剪贴板
+keyfunc_sharex_capture_clipboard(){
+    global
+    send ^!{F3}
+    Return
+}
+
+; shareX 截图 上传
+keyfunc_sharex_capture_upload(){
+    global
+    send ^!{F4}
+    Return
+}
+
+; shareX 截图 to base64
+keyfunc_sharex_capture_base64(){
+    global
+    send ^!{F5}
+    Return
+}
+
+
+; shareX 录屏 gif
+keyfunc_sharex_record_gif(){
+    global
+    send ^!{F6}
+    Return
+}
+
+
+; shareX 录屏 视频
+keyfunc_sharex_record_video(){
+    global
+    send ^!{F7}
+    Return
+}
+
+
+; shareX ocr
+keyfunc_sharex_ocr(){
+    global
+    send ^!{F9}
+    Return
+}
