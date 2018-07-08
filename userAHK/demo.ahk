@@ -104,3 +104,11 @@ keyfunc_open_totalcmd(){
 		WinMinimize
     Return
 }
+
+
+; 发送alt+f4
+keyfunc_close_window(){
+    global
+    send !{F4}
+    Return
+}
