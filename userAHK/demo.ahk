@@ -1,8 +1,3 @@
-keyfunc_aa(){
-  msgbox, aa
-}
-
-
 keyfunc_test2(str){
   msgbox, % str
   return
@@ -113,6 +108,14 @@ keyfunc_close_window(){
     Return
 }
 
+
+; ditto
+keyfunc_ditto(){
+    global
+    ; ` 需要加一个`进行转义
+    send ^#``
+    Return
+}
 
 ; snipaste截图
 keyfunc_snipaste_capture(){
