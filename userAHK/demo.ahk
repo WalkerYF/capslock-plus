@@ -63,12 +63,15 @@ keyFunc_sterminal_powershell(){
 
 keyfunc_write_diary(){
     global
-    Run %ComSpec% /c "new-note diary"
+    ; Run %ComSpec% /c "new-note diary"
+    Run C:\Program Files\Notepad2\Notepad2.exe E:\0todo\record\diary.md
     Return
 }
 keyfunc_open_todolist(){
     global
-    Run C:\Program Files\Notepad2\Notepad2.exe E:\0todo\todo.md
+    Run C:\Program Files\Notepad2\Notepad2.exe E:\0todo\record\todo.md
+    ; Run onenote:https://d.docs.live.net/0741bc8b85d98a35/onenote/test/TODO.one#TODO&section-id={562D89D1-9914-4856-A5E7-06F971F31919}&page-id={99672F65-CF8C-4AE1-BC37-B025DD47BCB1}&end
+    ; Run OneNote
     Return
 }
 
@@ -76,7 +79,7 @@ keyfunc_open_todolist(){
 ; 打开草稿
 keyfunc_open_draft(){
     global
-    Run C:\Program Files\Notepad2\Notepad2.exe E:\0inbox\draft.md
+    Run C:\Program Files\Notepad2\Notepad2.exe E:\0todo\record\draft.md
     Return
 }
 
@@ -100,6 +103,33 @@ keyfunc_open_totalcmd(){
     Return
 }
 
+keyfunc_open_vnote(){
+    global
+	; DetectHiddenWindows, on
+	; IfWinNotExist ahk_class VNOTE_NOTE
+	; 	Run D:\Program\VNote\VNote.exe
+	; Else
+	; 	IfWinNotActive ahk_class VNOTE_NOTE
+	; 	WinActivate
+	; Else
+	; 	WinMinimize
+
+	Run D:\Program\VNote\VNote.exe
+    Return
+}
+
+keyfunc_open_keepass(){
+    global
+	DetectHiddenWindows, on
+	IfWinNotExist ahk_class KEEPASS
+		Run E:\1keepass\KeePass.exe
+	Else
+		IfWinNotActive ahk_class KEEPASS
+		WinActivate
+	Else
+		WinMinimize
+    Return
+}
 
 ; 发送alt+f4
 keyfunc_close_window(){
@@ -173,5 +203,21 @@ keyfunc_sharex_record_video(){
 keyfunc_sharex_ocr(){
     global
     send ^!{F9}
+    Return
+}
+
+
+; shareX ocr
+keyfunc_boostnote(){
+    global
+    send ^!{F10}
+    Return
+}
+
+keyfunc_write_blog(){
+    global
+    ; 打开博客文件夹
+    Run D:\Program Files\Microsoft VS Code\Code.exe E:\8web\blog\source\_posts
+    ; Run D:\Program Files\Typora\Typora.exe E:\8web\blog\source\_posts
     Return
 }
