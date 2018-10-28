@@ -64,12 +64,19 @@ keyFunc_sterminal_powershell(){
 keyfunc_write_diary(){
     global
     ; Run %ComSpec% /c "new-note diary"
-    Run C:\Program Files\Notepad2\Notepad2.exe E:\0todo\record\diary.md
+    Run D:\Program Files (x86)\Notepad++\notepad++.exe E:\6my_vnote\diary\diary.md
+    Return
+}
+keyfunc_write_xy(){
+    global
+    ; Run %ComSpec% /c "new-note diary"
+    Run D:\Program Files (x86)\Notepad++\notepad++.exe E:\6my_vnote\diary\2018-xy.md
     Return
 }
 keyfunc_open_todolist(){
     global
-    Run C:\Program Files\Notepad2\Notepad2.exe E:\0todo\record\todo.md
+    Run D:\Program Files (x86)\Notepad++\notepad++.exe E:\6my_vnote\TODO\todo.md
+    ; Run C:\Program Files\Notepad2\Notepad2.exe E:\6my_vnote\TODO\todo.md
     ; Run onenote:https://d.docs.live.net/0741bc8b85d98a35/onenote/test/TODO.one#TODO&section-id={562D89D1-9914-4856-A5E7-06F971F31919}&page-id={99672F65-CF8C-4AE1-BC37-B025DD47BCB1}&end
     ; Run OneNote
     Return
@@ -79,7 +86,7 @@ keyfunc_open_todolist(){
 ; 打开草稿
 keyfunc_open_draft(){
     global
-    Run C:\Program Files\Notepad2\Notepad2.exe E:\0todo\record\draft.md
+    Run C:\Program Files\Notepad2\Notepad2.exe E:\6my_vnote\TODO\draft.md
     Return
 }
 
@@ -122,7 +129,7 @@ keyfunc_open_keepass(){
     global
 	DetectHiddenWindows, on
 	IfWinNotExist ahk_class KEEPASS
-		Run E:\1keepass\KeePass.exe
+		Run E:\9keepass\KeePass.exe
 	Else
 		IfWinNotActive ahk_class KEEPASS
 		WinActivate
