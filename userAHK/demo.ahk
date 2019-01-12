@@ -57,25 +57,25 @@ keyFunc_sterminal_msys(){
 }
 keyFunc_sterminal_powershell(){
     global
-    Run C:\Users\walke\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\my powershell.lnk
+    Run C:\Users\wyf\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell.lnk
     Return
 }
 
 keyfunc_write_diary(){
     global
     ; Run %ComSpec% /c "new-note diary"
-    Run D:\Program Files (x86)\Notepad++\notepad++.exe E:\6my_vnote\diary\diary.md
+    Run D:\Program Files (x86)\Notepad++\notepad++.exe E:\4note\mydiary\diary.md
     Return
 }
 keyfunc_write_xy(){
     global
     ; Run %ComSpec% /c "new-note diary"
-    Run D:\Program Files (x86)\Notepad++\notepad++.exe E:\6my_vnote\diary\2018-xy.md
+    Run D:\Program Files (x86)\Notepad++\notepad++.exe E:\4note\mydiary\2018-xy.md
     Return
 }
 keyfunc_open_todolist(){
     global
-    Run D:\Program Files (x86)\Notepad++\notepad++.exe E:\6my_vnote\TODO\todo.md
+    Run D:\Program Files (x86)\Notepad++\notepad++.exe E:\4note\TODO\todo.md
     ; Run C:\Program Files\Notepad2\Notepad2.exe E:\6my_vnote\TODO\todo.md
     ; Run onenote:https://d.docs.live.net/0741bc8b85d98a35/onenote/test/TODO.one#TODO&section-id={562D89D1-9914-4856-A5E7-06F971F31919}&page-id={99672F65-CF8C-4AE1-BC37-B025DD47BCB1}&end
     ; Run OneNote
@@ -86,7 +86,7 @@ keyfunc_open_todolist(){
 ; 打开草稿
 keyfunc_open_draft(){
     global
-    Run C:\Program Files\Notepad2\Notepad2.exe E:\6my_vnote\TODO\draft.md
+    Run D:\Program Files (x86)\Notepad++\notepad++.exe E:\4note\TODO\draft.md
     Return
 }
 
@@ -110,20 +110,6 @@ keyfunc_open_totalcmd(){
     Return
 }
 
-keyfunc_open_vnote(){
-    global
-	; DetectHiddenWindows, on
-	; IfWinNotExist ahk_class VNOTE_NOTE
-	; 	Run D:\Program\VNote\VNote.exe
-	; Else
-	; 	IfWinNotActive ahk_class VNOTE_NOTE
-	; 	WinActivate
-	; Else
-	; 	WinMinimize
-
-	Run D:\Program\VNote\VNote.exe
-    Return
-}
 
 keyfunc_open_keepass(){
     global
@@ -160,6 +146,13 @@ keyfunc_snipaste_capture(){
     send ^!{F1}
     Return
 }
+
+; eduic
+; keyfunc_eduic(){
+;     global
+;     send ^!D
+;     Return
+; }
 
 ; snipaste贴图
 keyfunc_snipaste_tie(){
@@ -224,7 +217,6 @@ keyfunc_boostnote(){
 keyfunc_write_blog(){
     global
     ; 打开博客文件夹
-    Run D:\Program Files\Microsoft VS Code\Code.exe E:\8web\blog\source\_posts
-    ; Run D:\Program Files\Typora\Typora.exe E:\8web\blog\source\_posts
+    Run D:\Program Files\Typora\Typora.exe E:\4note\mypost
     Return
 }
